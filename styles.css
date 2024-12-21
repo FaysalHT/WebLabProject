@@ -1,0 +1,370 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --dark-color: #2c3e50;
+  --light-color: #ecf0f1;
+}
+
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom, #3498db, #2ecc71);
+  background-size: cover; /* Ensures the background image/gradient scales appropriately */
+  background-attachment: fixed; /* Keeps the background in place while scrolling */
+  margin-top: 0;
+ margin-top: 70px;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the height adjusts dynamically */
+}
+
+.navbar {
+  position: absolute;
+  height: 75px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.hero-section{
+
+  color: #ffffff;
+  background-image: linear-gradient(#3498dba2, #2ecc7000),
+                  url("cambridge.jfif");
+  display:flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 100px;
+  background-size: cover;
+  height: 100vh;
+}
+
+
+
+.img{
+  height: auto;
+  width: 1000px;
+}
+
+.hero-container{
+  text-shadow: rgba(8, 8, 8, 0.397) 3px 0 3px;
+text-align: center;
+width: fit-content;
+
+
+}
+
+
+
+.hero-image{
+  border-radius: 10px;
+  width: 1000px;
+  background-color: #333;
+  overflow: hidden;
+
+}
+.nav-link.active {
+  font-weight: bold;
+  color: var(--primary-color) !important;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+section.containerpy-5{
+  padding-top: 75px;
+  width: 100%;
+}
+
+section {
+  padding: 50px 0;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  justify-content: space-around;
+  width: 100%; 
+  font-family: 'Montserrat', sans-serif;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.card {
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+#universityList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.university-card {
+  margin: 20px;
+  width: calc(33.33% - 20px);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .university-card {
+      width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .university-card {
+      width: 100%;
+  }
+}
+
+footer {
+  background-color: var(--dark-color) !important;
+  font-family: 'Montserrat', sans-serif;
+}
+
+footer a {
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.grid-item.feature {
+  transition: transform 0.3s ease;
+}
+
+.grid-item.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature h2 {
+  margin-top: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.feature ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.feature li {
+  margin-bottom: 10px;
+}
+
+.feature li::before {
+  content: "\2022";
+  color: #3498db;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* login/signup styles */
+.auth-container {
+  background: linear-gradient(135deg, #6c63ff, #b18aff);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.auth-card h1 {
+  font-size: 2rem;
+  color: #6c63ff;
+}
+
+.auth-card .btn-primary {
+  background-color: #6c63ff;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.auth-card .btn-primary:hover {
+  background-color: #5849cc;
+}
+
+.auth-card a {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
+
+.auth-card .btn-secondary {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-card .btn-secondary:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.auth-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Our features styles */
+#features {
+  padding: 50px 0;
+}
+
+.feature-list {
+  display: block;  /* Stack features one below the other */
+  gap: 30px;
+}
+
+.feature-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;  /* Ensure spacing between features */
+}
+
+.feature-image {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  opacity: 80%;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensure the image covers the container */
+  
+  border-radius: 10px;
+  transform: translateX(100px);
+  transition: transform 0.3s ease;  /* Zoom effect on hover */
+}
+
+.feature-info {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: #fff; /* White text color */
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.281);  /* Semi-transparent background */
+  padding: 20px;
+  filter: grayscale(10px);
+  border-radius: 10px;
+  width: 40%;
+  opacity: 0;
+  transition: opacity 0.3s ease;  /* Fade-in effect for feature text */
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.feature-item:hover .feature-info {
+  opacity: 1;  /* Show text when hovering over the image */
+}
+
+.feature-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.feature-info ul {
+  list-style: none;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.feature-info ul li {
+  margin-bottom: 10px;
+}
+
+.feature-item:hover .feature-image img {
+  transform: scale(1.05);  /* Zoom effect on hover */
+}
+
+@media (max-width: 768px) {
+  .feature-info {
+      width: 90%;  /* Ensure feature text takes more width on mobile */
+  }
+
+  .feature-image {
+      height: 300px;  /* Adjust image height on mobile */
+  }
+}
+
+/* Add Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Josefin+Sans:wght@400;600&display=swap');
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation for cards */
+.card {
+  animation: bounceIn 1s ease;
+}
+
+/* Animation for About section developer cards */
+.about-developer {
+  animation: fadeIn 1.5s ease-in-out;
+}
